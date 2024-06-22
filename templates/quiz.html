@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro 2024 Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Euro 2024 Logo" class="logo">
+        <h1>Euro 2024 Quiz</h1>
+        <form action="{{ url_for('quiz') }}" method="post">
+            <div>
+                <p>{{ question[1] }}</p>
+                <input type="radio" id="q{{ question[0] }}a1" name="{{ question[0] }}" value="{{ question[2] }}">
+                <label for="q{{ question[0] }}a1">{{ question[2] }}</label><br>
+                <input type="radio" id="q{{ question[0] }}a2" name="{{ question[0] }}" value="{{ question[3] }}">
+                <label for="q{{ question[0] }}a2">{{ question[3] }}</label><br>
+                <input type="radio" id="q{{ question[0] }}a3" name="{{ question[0] }}" value="{{ question[4] }}">
+                <label for="q{{ question[0] }}a3">{{ question[4] }}</label><br>
+                <input type="radio" id="q{{ question[0] }}a4" name="{{ question[0] }}" value="{{ question[5] }}">
+                <label for="q{{ question[0] }}a4 }}">{{ question[5] }}</label><br>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>
